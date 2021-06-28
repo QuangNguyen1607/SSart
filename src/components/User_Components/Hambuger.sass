@@ -1,0 +1,49 @@
+//- .hambuger
+//- 	span
+//- 	span
+//- 	span
+//- 	span
+.hambuger
+	height: 19px
+	display: none
+	align-items: center
+	justify-content: center
+	width: 32px
+	position: relative
+	transition: .3s all ease-in-out
+	z-index: 999
+	@media screen and ( max-width: 1023.67px )
+		display: flex
+	&.active
+		span
+			&:first-child
+				top: 18px
+				left: 50%
+				width: 0px
+			&:nth-child(2)
+				transform: rotate(45deg)
+				background: $black
+			&:nth-child(3)
+				transform: rotate(-45deg)
+				background: $black
+			&:nth-child(4)
+				top: 18px
+				left: 50%
+				width: 0px
+	span
+		display: block
+		position: absolute
+		left: 0
+		transform: rotate(0deg)
+		opacity: 1
+		transition: .5s ease-in-out
+		border-radius: 9px
+		background: $black
+		width: 100%
+		height: 1px
+		&:first-child
+			top: 0
+		&:nth-child(2), &:nth-child(3)
+			top: 8px
+		&:nth-child(4)
+			top: 16px
