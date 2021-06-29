@@ -1,0 +1,82 @@
+.nghe-si-tac-pham-ds
+	padding-top: 0 !important
+	.box-tac-pham
+		.img
+			a
+				+img-ratio(1)
+		.title
+			color: $black-1
+			font-size: r(18px)
+			font-weight: 500
+			letter-spacing: 0.9px
+			margin-top: 10px
+			display: inline-block
+			+hover-underline-poa(100%,50%,$black,1px)
+	.box-detail-tac-pham
+		margin-top: 40px
+		box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.1)
+		background-color: #ffffff
+		padding: 60px
+		position: relative
+		width: 0
+		height: 0
+		overflow: hidden
+		visibility: hidden
+		// transition: .3s all  ease-in-out
+		padding: 0px
+		margin-top: 0px
+		transform: translateY(20px)
+		transition: .7s transform  ease-in-out, .9s opacity ease-in-out
+		opacity: 0
+		&.active
+			width: auto
+			height: auto
+			overflow: visible
+			visibility: visible
+			margin-top: 40px
+			padding: 60px
+			opacity: 1
+			transform: translateY(0px)
+		.close-button
+			position: absolute
+			top: 0
+			right: 0
+			cursor: pointer
+			&:hover
+				em
+					color: $black
+			em
+				color: $grey-2
+				font-size: r(30px)
+				transition: .3s all ease-in-out
+		.box-img
+			.wrap-title-button
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-top: 15px
+			.title
+				color: $black-1
+				font-size: r(18px)
+				font-weight: 500
+				text-transform: uppercase
+				letter-spacing: 0.9px
+			.wrap-button
+				display: flex
+				align-items: center
+				margin-right: -4px
+				.button-next
+					margin-left: 19px
+		.box-content
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 13px 30px 67px 30px
+		.content
+			*
+				color: $black-1
+				line-height: 1.5
+				letter-spacing: 0.8px
+			p+p
+				margin-top: 25px

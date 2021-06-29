@@ -4,6 +4,14 @@
 	font-weight: 700
 	text-transform: uppercase
 	letter-spacing: 1.2px
+	&.pl
+		padding-left: 122px
+		@media (max-width: 1023.98px)
+			padding-left: 80px
+		@media (max-width: 767.98px)
+			padding-left: 40px
+		@media (max-width: 575.98px)
+			padding-left: 0px
 	&.white
 		color: white
 		text-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
@@ -14,3 +22,62 @@
 	font-size: 1rem
 	line-height: 1.375
 	letter-spacing: 0.8px
+.wrap-title-flex
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+.title-page-big
+	color: $black-1
+	font-size: r(24px)
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 1.2px
+	&.fw-400
+		font-weight: 400
+	&.mb
+		margin-bottom: 22px
+.title-underline-text
+	color: $black-1
+	font-size: 20px
+	letter-spacing: 1px
+	position: relative
+	font-weight: 400
+	margin-bottom: 28px
+	margin-left: 122px
+	@media (max-width: 1023.98px)
+		margin-left: 80px
+	@media (max-width: 767.98px)
+		margin-left: 40px
+	@media (max-width: 575.98px)
+		margin-left: 0px
+	&::before
+		content: ''
+		position: absolute
+		top: 120%
+		left: 0
+		width: 60px
+		height: 2px
+		background-color: $black
+.date-main
+	color: $grey
+	font-size: r(14px)
+	letter-spacing: 0.7px
+.wrap-social-main
+	+type-none
+	display: flex
+	align-items: center
+	li+li
+		margin-left: 10px
+	a
+		width: 30px
+		height: 30px
+		border: 1px solid #e0e0e0
+		background-color: #ffffff
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		transition: .3s all ease-in-out
+		&:hover
+			background-color: $black
+			color: white

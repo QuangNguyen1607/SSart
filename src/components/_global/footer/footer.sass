@@ -1,1 +1,66 @@
-
+footer
+	background-color: $black
+	padding-top: 60px
+	padding-bottom: 60px
+	.logo-footer
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-right: 62px
+		margin-bottom: 50px
+		@media (max-width: 1023.98px)
+			padding-right: 0px
+			align-items: flex-start
+			margin-bottom: 35px
+	.box-address-footer
+		margin-bottom: 50px
+		@media (max-width: 1023.98px)
+			margin-bottom: 35px
+	p
+		opacity: 0.5
+		color: rgba(255, 255, 255, .5)
+		font-size: 12px
+		text-align: center
+		letter-spacing: 0.6px
+		margin-top: 15px
+		margin-bottom: 10px
+		@media (max-width: 1023.98px)
+			text-align: left
+			margin-bottom: 20px
+			margin-top: 20px
+	.wrap-social
+		em
+			color: white
+			font-size: 17px
+		a+a
+			margin-left: 33px
+	.title-footer-underline
+		color: rgba(255, 255, 255, .5)
+		font-size: r(14px)
+		text-decoration: underline
+		text-transform: uppercase
+		letter-spacing: 0.7px
+		margin-bottom: 22px
+	.title-footer
+		color: #ffffff
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 0.8px
+	.address
+		*
+			text-align: left
+			color: rgba(255, 255, 255, .5)
+			font-size: 14px
+			letter-spacing: 0.7px
+			line-height: normal
+	.list-menu-footer
+		+type-none()
+		li
+			&+li
+				margin-top: 12px
+			a
+				font-size: 1rem
+				color: rgba(255, 255, 255, .5)
+				text-transform: uppercase
+				letter-spacing: 0.8px
+				+hover-underline-poa(110%,50%,white,1px)

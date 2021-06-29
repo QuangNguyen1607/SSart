@@ -14,12 +14,13 @@ html(lang="en")
 		title #{title}
 
 	body(class=bodyClass)
-		block header
-			include ../components/_global/header/header.pug
-		main
-			block main
-		block footer
-			include ../components/_global/footer/footer.pug
+		#butter
+			block header
+				include ../components/_global/header/header.pug
+			main
+				block main
+			block footer
+				include ../components/_global/footer/footer.pug
 
 		//- // script Lazyload css and js //
 		script.
@@ -31,6 +32,7 @@ html(lang="en")
 				'./css/plugins.min.css',
 				'https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700;900&display=swap',
 				'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css',
+				'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
 				'https://fonts.googleapis.com/icon?family=Material+Icons',
 				'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
 				], function () {

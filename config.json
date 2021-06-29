@@ -2,6 +2,7 @@
 	"font": ["src/fonts/**"],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
+		"src/_plugins/butter.js",
 		"src/_plugins/ls.unveilhooks.min.js",
 		"src/_plugins/mapping.js",
 		"src/_plugins/swiper/swiper-bundle.min.js",

@@ -1,0 +1,50 @@
+.nghe-si-tong-quan
+	padding-top: 0px !important
+	@media (min-width: 1200px)
+		padding-bottom: 106px
+	.wrap-flex-content
+		display: flex
+		flex-wrap: wrap
+		.content
+			flex: 0 0 31.914%
+			max-width: 31.914%
+			padding-right: 90px
+			@media (max-width: 1279.98px)
+				padding-right: 20px
+			@media (max-width: 767.98px)
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 30px
+			.title
+				color: $black-1
+				font-size: r(18px)
+				line-height: 1.3333
+				text-transform: uppercase
+				letter-spacing: 0.9px
+				margin-bottom: 27px
+				@media (max-width: 1023.98px)
+					font-size: r(17px)
+			.desc
+				color: $black-1
+				font-size: 1rem
+				font-weight: 400
+				letter-spacing: 0.8px
+				*
+					color: $black-1
+					font-size: 1rem
+					font-weight: 400
+					letter-spacing: 0.8px
+				p+p
+					margin-top: 25px
+		.img
+			flex: 0 0 68.086%
+			max-width: 68.086%
+			@media (max-width: 767.98px)
+				flex: 0 0 100%
+				max-width: 100%
+			a
+				+img-ratio(891/960)
+			p
+				color: $black-1
+				font-size: r(14px)
+				letter-spacing: 0.7px

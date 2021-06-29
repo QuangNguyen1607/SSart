@@ -1,0 +1,75 @@
+.wrap-title-select
+	.wrap-select-post
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		.post-select
+			display: flex
+			align-items: center
+			&+.post-select
+				margin-left: 90px
+				@media (max-width: 767.98px)
+					margin-left: 30px
+				@media (max-width: 575.98px)
+					margin-left: 0px
+					margin-top: 20px
+			p
+				color: $black-1
+				font-size: r(18px)
+				font-weight: 700
+				letter-spacing: 0.9px
+			.select-option
+				display: flex
+				align-items: center
+				width: 180px
+				height: 40px
+				position: relative
+				justify-content: space-between
+				background-color: $white-1
+				margin-left: 20px
+				padding-left: 19px
+				padding-right: 15px
+				cursor: pointer
+				@media (max-width: 767.98px)
+					width: 150px
+				&:hover
+					.list-option
+						opacity: 1
+						visibility: visible
+				em
+					color: $grey
+					font-size: 1rem
+				span
+					color: $black-1
+					font-size: r(18px)
+					font-weight: 400
+					text-transform: uppercase
+					letter-spacing: 0.9px
+					@media (max-width: 767.98px)
+						font-size: r(16px)
+			.list-option
+				position: absolute
+				top: 100%
+				left: 0
+				box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.05)
+				background-color: #ffffff
+				width: 100%
+				z-index: 2
+				opacity: 0
+				visibility: hidden
+				+type-none
+				padding: 5px 0px
+				transition: .3s all  ease-in-out
+				.option
+					padding: 0px 20px
+					&+.option
+						a
+							border-top: 1px solid #e0e0e0
+				a
+					padding: 8px 0px
+					color: $grey
+					display: inline-block
+					width: 100%
+					transition: .3s all  ease-in-out
+					&:hover
+						text-shadow: 0 0 .65px #333, 0 0 .65px #333;

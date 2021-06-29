@@ -1,0 +1,88 @@
+.item-display-gallery
+	.display-img
+		a
+			+img-ratio(330/330)
+	.display-content
+		padding-top: 14px
+		padding-left: 2px
+		.display-title
+			color: $black-1
+			font-size: r(18px)
+			font-weight: 500
+			line-height: 1.33333333333
+			text-transform: uppercase
+			letter-spacing: 0.9px
+			margin-bottom: 6px
+			display: inline-block
+			+hover-underline-poa(110%,50%,$text,1px)
+		.display-small
+			color: $black-1
+			line-height: 1.5
+			letter-spacing: 0.8px
+			margin-bottom: 5px
+		.display-price
+			color: $grey
+			line-height: 1.375
+			letter-spacing: 0.8px
+.select-st-1
+	width: 179px
+	height: 39px
+	border: 1px solid $white-1
+	background-color: $white-1
+	color: $black-1
+	font-size: r(18px)
+	text-transform: uppercase
+	letter-spacing: 0.9px
+	padding-left: 19px
+	padding-top: 2px
+	appearance: none
+	@media (max-width: 767.98px)
+		width: 130px
+		font-size: r(15px)
+		padding-left: 10px
+.wrap-select-1
+	position: relative
+	width: fit-content
+	&::after
+		content: "\e874"
+		font-family: Linearicons-Free
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 13px
+		z-index: 2
+		color: $grey
+		font-size: 10px
+		@media (max-width: 767.98px)
+			right: 7px
+.post-item
+	margin-bottom: 30px
+	.post-img
+		a
+			+img-ratio(450/450)
+	.post-content
+		padding-top: 26px
+		@media (max-width: 1023.98px)
+			padding-top: 15px
+	.post-title
+		color: $black-1
+		text-transform: uppercase
+		letter-spacing: 0.8px
+		transition: .15s all ease-in-out
+		margin-bottom: 8px
+		display: inline-block
+		+rgtext(2)
+		&:hover
+			color: $grey-2
+			text-decoration: underline
+	.post-author
+		color: $grey
+		letter-spacing: 0.8px
+		margin-bottom: 6px
+	.post-date, .post-category
+		color: $grey
+		font-size: r(14px)
+		letter-spacing: 0.7px
+	.post-category
+		display: inline-block
+		margin-bottom: 5px

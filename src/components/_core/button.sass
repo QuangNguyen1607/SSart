@@ -8,6 +8,12 @@
 		line-height: 1.285
 		text-transform: uppercase
 		letter-spacing: 0.7px
+		&.grey
+			&:hover
+				color: $grey-2
+			&::after
+				background-color: $grey-2
+				height: 1.3px
 		&.white
 			color: white
 			&:hover
@@ -20,3 +26,53 @@
 .btn-center
 	display: flex
 	justify-content: center
+.button-sw-1
+	em
+		color: $grey
+		font-size: r(18px)
+.wrap-button-static
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	z-index: 999
+	position: relative
+	.button-next
+		margin-left: 15px
+	em
+		color: $grey
+		font-size: r(18px)
+.wrap-button-main
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	z-index: 999
+	&.no-right
+		position: static
+	@media (max-width: 1280px )
+		position: absolute
+		bottom: 22px
+		right: 0
+		padding-top: 10px
+	.button-next,.button-prev
+		@media (min-width: 1281px )
+			position: absolute
+			top: 50%
+			z-index: 9
+			transform: translateY(-50%)
+	.button-next
+		@media (min-width: 1281px)
+			left: 100%
+			padding-left: 21px
+	.button-prev
+		@media (min-width: 1281px)
+			right: 100%
+			padding-right: 21px
+		@media (max-width: 1280px)
+			margin-right: 10px
+.button-sw-2
+	em
+		font-size: r(36px)
+		color: $grey
+		@media (max-width: 1280px)
+			font-size: 1.125rem
+
