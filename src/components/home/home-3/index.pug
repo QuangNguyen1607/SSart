@@ -4,24 +4,63 @@ section.home-3.main-section
 			h2.title-text.pl Trưng bày
 			.wrap-select-1
 				select.select-st-1(name="trungbay")
-					option(value="") Cyril Kongo
-					option(value="") Cyril Kongo
-					option(value="") Cyril Kongo
-		.wrap-slide
-			.swiper-container
-				.swiper-wrapper
-					-for(i=0;i<5;i++)
-						.swiper-slide
-							.item-display-gallery
-								.display-img.zoom-img
-									a(href="")
-										img(src="./img/trung-bay/1.png", alt="")
-								.display-content
-									a(href="").display-title Horus eye
-									p.display-small 200x200cm – Mixed media on French linen
-									.display-price Giá từ: 54.000.000 - 90.000.000 đ
-		.wrap-button
-			.button-prev.button-sw-1
-				em.lnr.lnr-chevron-left
-			.button-next.button-sw-1
-				em.lnr.lnr-chevron-right
+					option(value="tab-slide-1") Cyril Kongo
+					option(value="tab-slide-2") Cyril Kongo
+					option(value="tab-slide-3") Cyril Kongo
+		.wrap-slide-tab.active#tab-slide-1
+			.wrap-slide
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<5;i++)
+							.swiper-slide
+								.item-display-gallery
+									.display-img.zoom-img
+										a(href="")
+											img(src="./img/trung-bay/1.png", alt="")
+									.display-content
+										a(href="").display-title Horus eye
+										p.display-small 200x200cm – Mixed media on French linen
+										.display-price Giá từ: 54.000.000 - 90.000.000 đ
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-chevron-left
+				.button-next.button-sw-1
+					em.lnr.lnr-chevron-right
+		.wrap-slide-tab#tab-slide-2
+			.wrap-slide
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<5;i++)
+							.swiper-slide
+								.item-display-gallery
+									.display-img.zoom-img
+										a(href="")
+											img(src="./img/trung-bay/1.png", alt="")
+									.display-content
+										a(href="").display-title Horus eye 2
+										p.display-small 200x200cm – Mixed media on French linen
+										.display-price Giá từ: 54.000.000 - 90.000.000 đ
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-chevron-left
+				.button-next.button-sw-1
+					em.lnr.lnr-chevron-right
+		.wrap-slide-tab#tab-slide-3
+			.wrap-slide
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<5;i++)
+							.swiper-slide
+								.item-display-gallery
+									.display-img.zoom-img
+										a(href="")
+											img(src="./img/trung-bay/1.png", alt="")
+									.display-content
+										a(href="").display-title Horus eye 3
+										p.display-small 200x200cm – Mixed media on French linen
+										.display-price Giá từ: 54.000.000 - 90.000.000 đ
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-chevron-left
+				.button-next.button-sw-1
+					em.lnr.lnr-chevron-right

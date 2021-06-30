@@ -1,0 +1,163 @@
+.nghe-si-gioi-thieu
+	padding-top: 0
+	.gallery
+		.wrap-flex-main
+			display: flex
+			flex-wrap: wrap
+			.gallery-item-content
+				flex: 0 0 31.9148%
+				max-width: 31.9148%
+				padding-right: 85px
+				padding-top: 26px
+				@media (max-width: 1279.98px)
+					flex: 0 0 100%
+					max-width: 100%
+					padding-right: 0px
+					padding-bottom: 20px
+					padding-top: 0
+				.title
+					color: $black-1
+					font-size: r(18px)
+					font-weight: 700
+					text-transform: uppercase
+					letter-spacing: 0.9px
+					margin-bottom: 8px
+				.content
+					*
+						color: $black-1
+						letter-spacing: 0.8px
+					p+p
+						margin-top: 25px
+			.gallery-item-img
+				flex: 0 0 68.0852%
+				max-width: 68.0852%
+				@media (max-width: 1279.98px)
+					flex: 0 0 100%
+					max-width: 100%
+				.img
+					width: 100%
+					a
+						width: 100%
+	.personKongo
+		.desc-main
+			color: $grey
+			line-height: 1.375
+			max-width: 810px
+			width: 100%
+			p
+				&+p
+					margin-top: 20px
+	.wrap-history-personKongo
+		max-width: 1230px
+		width: 100%
+		margin: 0 auto
+		position: relative
+		margin-top: 60px
+		&::before
+			content: ''
+			position: absolute
+			width: 1px
+			background-color: #e0e0e0
+			left: 50%
+			transform: translateX(-50%)
+			top: 0
+			height: 100%
+			@media (max-width: 767.98px)
+				left: 20px
+				transform: translateX(0)
+		.sec-history
+			display: flex
+			flex-wrap: wrap
+			margin-top: 50px
+			@media (min-width: 768px)
+				&:nth-child(2n-1)
+					.item-img-content
+						padding-right: 120px
+						@media (max-width: 1279.98px)
+							padding-right: 80px
+						@media (max-width: 1023.98px)
+							padding-right: 60px
+						.item-date-history
+							right: 0
+							top: 0
+							transform: translateX(50%)
+							&::before
+								left: -25px
+				&:nth-child(2n)
+					flex-direction: row-reverse
+					.item-img-content
+						padding-left: 120px
+						@media (max-width: 1279.98px)
+							padding-left: 80px
+						@media (max-width: 1023.98px)
+							padding-left: 60px
+						.item-date-history
+							top: 0
+							left: 0
+							transform: translateX(-50%)
+							&::before
+								right: -25px
+			.item-img-content
+				flex: 0 0 50%
+				max-width: 50%
+				position: relative
+				@media (max-width: 767.98px)
+					padding-left: 60px
+					flex: 0 0 100%
+					max-width: 100%
+					padding-right: 20px
+				.item-img
+					a
+						+img-ratio(350/495)
+				.item-title
+					margin-top: 10px
+					margin-bottom: 18px
+					padding-right: 20px
+					a
+						color: $black-1
+						font-size: r(24px)
+						font-weight: 400
+						line-height: 1.25
+						text-transform: uppercase
+						+hover-underline(97%,$black-1)
+				.item-desc
+					color: $grey
+					font-size: 14px
+					font-weight: 400
+					line-height: 1.571
+					margin-bottom: 32px
+			.item-empty
+				flex: 0 0 50%
+				max-width: 50%
+				@media (max-width: 767.98px)
+					display: none
+			.item-date-history
+				position: absolute
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: #fff
+				padding: 5px 0px
+				@media (max-width: 767.98px)
+					top: 0
+					left: 0
+					transform: translateX(-6%)
+				span
+					color: $black-1
+					font-size: r(24px)
+					font-weight: 400
+					@media (max-width: 1023.98px)
+						font-size: r(20px)
+					@media (max-width: 767.98px)
+						font-size: r(22px)
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					width: 15px
+					height: 1px
+					background-color: $text
+					display: inline-block
+					@media (max-width: 767.98px)
+						display: none

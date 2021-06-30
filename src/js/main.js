@@ -13,25 +13,42 @@ $(document).ready(function () {
 	scrollDown();
 	TabTacPham();
 	wrapHrefTacPham();
+	selectTabSlide();
+	AppendTitle();
 });
+/*==================== Append Title ====================*/
+function AppendTitle() {
+	if ($(".page-trung-bay-chi-tiet").length > 0) {
+		let textVal = $('.itemcrumb.active span').text()
+		$(".page-trung-bay-chi-tiet .title-page-big").text(textVal);
+	}
+}
+/*==================== Select tab silde home ====================*/
+function selectTabSlide() {
+	$(".select-st-1").change(function () {
+		var selectedVal = $(".select-st-1 option:selected").val();
+		let result = "#" + selectedVal;
+		$(result).addClass("active").siblings().removeClass("active");
+	});
+}
 /*==================== Tab Tác Phẩm ====================*/
 function TabTacPham() {
-	$('.box-tac-pham a').click(function () {
+	$(".box-tac-pham a").click(function () {
 		let hash = this.hash;
-		$(".box-detail-tac-pham").not(hash).removeClass('active')
-		$(hash).addClass('active')
-		return false
-	})
-	$('.close-button').click(function () {
-		$(".box-detail-tac-pham").removeClass('active')
-	})
+		$(".box-detail-tac-pham").not(hash).removeClass("active");
+		$(hash).addClass("active");
+		return false;
+	});
+	$(".close-button").click(function () {
+		$(".box-detail-tac-pham").removeClass("active");
+	});
 }
 /*==================== Auto Wrap Href ====================*/
 function wrapHrefTacPham() {
-	$('.content-main img').each(function () {
-		let src = $(this).attr('src')
-		$(this).wrap('<a href="'+src+'" data-fancybox></a>')
-	})
+	$(".content-main img").each(function () {
+		let src = $(this).attr("src");
+		$(this).wrap('<a href="' + src + '" data-fancybox></a>');
+	});
 }
 /*==================== Next Section ====================*/
 function scrollDown() {
@@ -150,26 +167,14 @@ function setBackgroundElement() {
 	// }
 }
 function mappingMenu() {
-	let mainMenu = $("header .bottom-wrap .menu-list").mapping({
-		mobileWrapper: "header .mobile-wrap",
-		mobileMethod: "appendTo",
-		desktopWrapper: "header .bottom-wrap",
-		desktopMethod: "appendTo",
-		breakpoint: 768,
-	});
-	let mainMenuTop = $("header .top-wrap .menu-list").mapping({
-		mobileWrapper: "header .mobile-wrap",
-		mobileMethod: "appendTo",
-		desktopWrapper: "header .top-wrap .main-menu-top",
-		desktopMethod: "appendTo",
-		breakpoint: 768,
-	});
-	let searchBox = $("header .top-wrap .searchbox").mapping({
-		mobileWrapper: "header .mobile-wrap",
-		mobileMethod: "appendTo",
-		desktopWrapper: "header .top-wrap .main-search",
-		desktopMethod: "appendTo",
-		breakpoint: 576,
+	let searchBox = $(
+		"header nav .wrap-menu-right .top-menubar .search"
+	).mapping({
+		mobileWrapper: "header nav .wrap-menu-right .hambuger",
+		mobileMethod: "insertBefore",
+		desktopWrapper: "header nav .wrap-menu-right .top-menubar",
+		desktopMethod: "prependTo",
+		breakpoint: 1024,
 	});
 }
 function swiperInit() {
@@ -195,6 +200,10 @@ function swiperInit() {
 	var BannerHome2 = new Swiper(".home-2 .swiper-container", {
 		slidesPerView: 1,
 		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		speed: 900,
 		navigation: {
 			nextEl: ".home-2 .button-next",
@@ -203,7 +212,6 @@ function swiperInit() {
 	});
 	var BannerHome2 = new Swiper(".box-detail-tac-pham .swiper-container", {
 		slidesPerView: 1,
-		loop: true,
 		speed: 900,
 		navigation: {
 			nextEl: ".box-detail-tac-pham .button-next",
@@ -213,6 +221,8 @@ function swiperInit() {
 	var trungBay = new Swiper(".home-3 .swiper-container", {
 		slidesPerView: 1,
 		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
 		speed: 900,
 		navigation: {
 			nextEl: ".home-3 .button-next",
@@ -252,15 +262,15 @@ function swiperInit() {
 			},
 		},
 	});
-	$('.wrap-slide-section').each(function (index) {
-		$(this).addClass('slide-gallery-' + index)
-		new Swiper(".slide-gallery-"+index+" .swiper-container", {
+	$(".wrap-slide-section").each(function (index) {
+		$(this).addClass("slide-gallery-" + index);
+		new Swiper(".slide-gallery-" + index + " .swiper-container", {
 			slidesPerView: 1,
 			spaceBetween: 30,
 			speed: 900,
 			navigation: {
-				nextEl: ".slide-gallery-"+index+" .button-next",
-				prevEl: ".slide-gallery-"+index+" .button-prev",
+				nextEl: ".slide-gallery-" + index + " .button-next",
+				prevEl: ".slide-gallery-" + index + " .button-prev",
 			},
 			breakpoints: {
 				500: {
@@ -277,7 +287,7 @@ function swiperInit() {
 				},
 			},
 		});
-	})
+	});
 }
 function pageBanner() {
 	var pageBanner = new Swiper(".pages-banner .swiper-container", {

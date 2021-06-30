@@ -14,13 +14,12 @@ html(lang="en")
 		title #{title}
 
 	body(class=bodyClass)
-		#butter
-			block header
-				include ../components/_global/header/header.pug
-			main
-				block main
-			block footer
-				include ../components/_global/footer/footer.pug
+		block header
+			include ../components/_global/header/header.pug
+		main
+			block main
+		block footer
+			include ../components/_global/footer/footer.pug
 
 		//- // script Lazyload css and js //
 		script.

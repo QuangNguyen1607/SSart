@@ -9,6 +9,10 @@
 		+type-none
 		align-items: center
 	.tab
+		&.active
+			.link
+				&::after
+					width: 100%
 		&+.tab
 			margin-left: 35px
 			@media (max-width: 575.98px)
@@ -18,10 +22,47 @@
 			letter-spacing: 0.8px
 			white-space: nowrap
 			+hover-underline-poa(110%,50%,$black-1,1px)
-	.wrap-social
-		margin-top: 14px
+.wrap-social-tab
+	margin-top: 14px
+	a
+		&+a
+			margin-left: 20px
+		em
+			font-size: 18px
+.zone-tab-2
+	+type-none
+	display: flex
+	align-items: center
+	margin-bottom: 27px
+	flex-wrap: wrap
+	li
+		@media (max-width: 575.98px)
+			flex: 0 0 100%
+			max-width: 100%
+		&.active
+			a
+				background-color: $black
+				color: white
+		&+li
+			margin-left: 20px
+			@media (max-width: 575.98px)
+				margin-left: 0px
+				margin-top: 20px
 		a
-			&+a
-				margin-left: 20px
-			em
-				font-size: 18px
+			min-width: 200px
+			height: 40px
+			border: 1px solid #e0e0e0
+			background-color: #ffffff
+			padding: 0 18px
+			transition: .3s all ease-in-out
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: r(18px)
+			letter-spacing: 0.9px
+			@media (max-width: 575.98px)
+				min-width: auto
+				width: 100%
+			&:hover
+				background-color: $black
+				color: white
