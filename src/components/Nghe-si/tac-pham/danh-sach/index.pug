@@ -1,64 +1,36 @@
 section.nghe-si-tac-pham-ds.main-section
 	.container
-		.row
-			-for(i=1;i<4;i++)
-				.col-lg-4
+		.swiper-container.tab-nghe-si-tac-pham
+			.swiper-wrapper
+				.swiper-slide
 					.box-tac-pham
 						.img
-							a(href="#tab-"+i).zoom-img
+							a(href="#tab-1").zoom-img
 								img(src="./img/post/4.png" alt="")
 						a(href="").title Bộ sưu tập
 		.box-detail-tac-pham#tab-1
 			.close-button
 				em.material-icons clear
-			.row
-				.col-lg-6
-					.box-img
-						.swiper-container
-							.swiper-wrapper
-								-for(i=0;i<3;i++)
-									.swiper-slide
-										.img.zoom-img
-											a(href="")
-												img(src="./img/post/5.png" alt="")
-						.wrap-title-button
-							.title Alchimie
-							.wrap-button
-								.button-prev
-									em.lnr.lnr-chevron-left
-								.button-next
-									em.lnr.lnr-chevron-right
-				.col-lg-6
-					.box-content
-						.content
-							p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
-							p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
-						.btn-left
-							a(href="").btn.btn-view-more xem thêm
-		.box-detail-tac-pham#tab-2
-			.close-button
-				em.material-icons clear
-			.row
-				.col-lg-6
-					.box-img
-						.swiper-container
-							.swiper-wrapper
-								-for(i=0;i<3;i++)
-									.swiper-slide
-										.img.zoom-img
-											a(href="")
-												img(src="./img/post/5.png" alt="")
-						.wrap-title-button
-							.title Alchimie
-							.wrap-button
-								.button-prev
-									em.lnr.lnr-chevron-left
-								.button-next
-									em.lnr.lnr-chevron-right
-				.col-lg-6
-					.box-content
-						.content
-							p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
-							p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
-						.btn-left
-							a(href="").btn.btn-view-more xem thêm
+			.swiper-container.content-nghe-si-tac-pham
+				.swiper-wrapper
+					.swiper-slide
+						.row
+							.col-lg-6
+								.box-img
+									.img.zoom-img
+										a(href="")
+											img(src="./img/post/5.png" alt="")
+									.wrap-title-button
+										.title Alchimie
+										.wrap-button
+											.button-prev
+												em.lnr.lnr-chevron-left
+											.button-next
+												em.lnr.lnr-chevron-right
+							.col-lg-6
+								.box-content
+									.content
+										p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
+										p Trong bộ sưu tập này, Kongo sử dụng chất liệu chính là các nguyên tố khoa học nhằm tôn vinh vẻ đẹp tiềm tàng vốn có của tự nhiên. Đồng thời, huyền thoại Graffiti cũng kết hợp thuần thục kỹ thuật nung truyền thống được phát triển thông qua lần hợp tác với thương hiệu nội thất bếp lừng danh thế giới La Cornue và ngôn ngữ nghệ thuật hiện đại để hoàn thiện bộ sưu tập này.
+									.btn-left
+										a(href="").btn.btn-view-more xem thêm

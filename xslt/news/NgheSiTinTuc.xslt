@@ -3,13 +3,11 @@
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/NewsList">
 		<section class="nghe-si-tin-tuc">
-			<div class="ajaxRespon">
-				<div class="container">
-					<xsl:apply-templates select="News[position()=1]" mode="PostBig"></xsl:apply-templates>
-					<div class="wrap-post-small">
-						<div class="row">
-							<xsl:apply-templates select="News[position() &gt; 1]" mode="PostSmall"></xsl:apply-templates>
-						</div>
+			<div class="container">
+				<xsl:apply-templates select="News[position()=1]" mode="PostBig"></xsl:apply-templates>
+				<div class="wrap-post-small">
+					<div class="row">
+						<xsl:apply-templates select="News[position() &gt; 1]" mode="PostSmall"></xsl:apply-templates>
 					</div>
 				</div>
 			</div>
@@ -43,7 +41,7 @@
 					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
+					<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
 				</a>
 				<h1 class="title">
 					<a>
@@ -92,7 +90,7 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
+						<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
 					</a>
 					<a class="post-title">
 						<xsl:attribute name="href">

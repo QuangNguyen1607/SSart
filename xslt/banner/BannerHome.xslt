@@ -2,18 +2,16 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/BannerList">
-		<section class="banner-home relative" id="home-banner">
-			<div class="swiper-container slide-home">
-				<div class="swiper-wrapper">
-					<xsl:apply-templates select="Banner"></xsl:apply-templates>
-				</div>
+		<div class="swiper-container slide-home">
+			<div class="swiper-wrapper">
+				<xsl:apply-templates select="Banner"></xsl:apply-templates>
 			</div>
-			<div class="container wrap-down">
-				<div class="arrow-down next-section">
-					<em class="lnr lnr-arrow-down"></em>
-				</div>
+		</div>
+		<div class="container wrap-down">
+			<div class="arrow-down next-section">
+				<em class="lnr lnr-arrow-down"></em>
 			</div>
-		</section>
+		</div>
 	</xsl:template>
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
@@ -30,8 +28,8 @@
 			<div class="box-text">
 				<div class="container">
 					<h2 class="banner-name">
-                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                    </h2>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					</h2>
 					<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 				</div>
 			</div>

@@ -129,18 +129,6 @@
                                 <div class="hambuger"><span></span><span></span><span></span><span></span></div>
                             </div>
                             <div class="menu-mobile">
-                                <ul class="main-menu">
-                                    <li class="list-item active"><a class="link" href="">Giới thiệu</a></li>
-                                    <li class="list-item"><a class="link" href="">Nghệ sĩ</a></li>
-                                    <li class="list-item"><a class="link" href="">Trưng bày</a></li>
-                                    <li class="list-item"><a class="link" href="">Tin tức - Sự kiện</a></li>
-                                    <li class="list-item"><a class="link" href="">Blog</a></li>
-                                    <li class="list-item"><a class="link" href="">Liên hệ</a></li>
-                                </ul>
-                                <ul class="wrap-social">
-                                    <li class="link-social"><a href=""><em class="fab fa-facebook-f"></em></a></li>
-                                    <li class="link-social"><a href=""><em class="fab fa-instagram"></em></a></li>
-                                </ul>
                             </div>
                         </nav>
                     </div>

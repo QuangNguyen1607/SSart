@@ -15,11 +15,68 @@ $(document).ready(function () {
 	wrapHrefTacPham();
 	selectTabSlide();
 	AppendTitle();
+	clickAjaxMenu();
+	MainMenuMobile();
 });
+/*==================== MainMenuMobile ====================*/
+function MainMenuMobile() {
+	$("header .dropdown a").click(function (e) {
+		var t = $(this).closest(".dropdown").find(".list-dropdown");
+		$(this)
+			.closest(".dropdown")
+			.siblings()
+			.find(".list-dropdown")
+			.slideUp();
+		$(this)
+			.closest(".dropdown")
+			.siblings()
+			.find(".list-dropdown")
+			.removeClass("active");
+		if (t.hasClass("active")) {
+			return true;
+		} else {
+			t.slideDown();
+			t.addClass("active");
+		}
+		return false;
+	});
+}
+/*==================== Click Ajax ====================*/
+function clickAjaxMenu() {
+	$("body").on("click", "a.ajaxlink", function (e) {
+		e.preventDefault();
+		ProcessAjax($(this).attr("href"));
+		return false;
+	});
+}
+function ProcessAjax(pageurl) {
+	//to get the ajax content and display in div with id 'content'
+	$.ajax({
+		url: pageurl,
+		data: {
+			isajax: false,
+		},
+		success: function (data) {
+			$(".ajaxRespon").html($(data).find(".ajaxRespon").html());
+			$(".ajaxSelect").html($(data).find(".ajaxSelect").html());
+			$(".pagination").html($(data).find(".pagination").html());
+			if ($(data).find(".pagination").length > 0) {
+				$(".pagination").html($(data).find(".pagination").html());
+			} else {
+				$(".pagination").html("");
+			}
+		},
+	});
+
+	//to change the browser URL to 'pageurl'
+	if (pageurl != window.location) {
+		window.history.pushState({ path: pageurl }, "", pageurl);
+	}
+}
 /*==================== Append Title ====================*/
 function AppendTitle() {
 	if ($(".page-trung-bay-chi-tiet").length > 0) {
-		let textVal = $('.itemcrumb.active span').text()
+		let textVal = $(".itemcrumb.active span").text();
 		$(".page-trung-bay-chi-tiet .title-page-big").text(textVal);
 	}
 }
@@ -167,6 +224,15 @@ function setBackgroundElement() {
 	// }
 }
 function mappingMenu() {
+	let MainMenu = $(
+		"header nav .wrap-menu-right .bottom-menu .main-menu"
+	).mapping({
+		mobileWrapper: "header nav .menu-mobile",
+		mobileMethod: "appendTo",
+		desktopWrapper: "header nav .wrap-menu-right .bottom-menu",
+		desktopMethod: "prependTo",
+		breakpoint: 1024,
+	});
 	let searchBox = $(
 		"header nav .wrap-menu-right .top-menubar .search"
 	).mapping({
@@ -174,6 +240,15 @@ function mappingMenu() {
 		mobileMethod: "insertBefore",
 		desktopWrapper: "header nav .wrap-menu-right .top-menubar",
 		desktopMethod: "prependTo",
+		breakpoint: 1024,
+	});
+	let Social = $(
+		"header nav .wrap-menu-right .top-menubar .wrap-social"
+	).mapping({
+		mobileWrapper: "header nav .menu-mobile",
+		mobileMethod: "appendTo",
+		desktopWrapper: "header nav .wrap-menu-right .top-menubar ",
+		desktopMethod: "appendTo",
 		breakpoint: 1024,
 	});
 }
@@ -210,12 +285,42 @@ function swiperInit() {
 			prevEl: ".home-2 .button-prev",
 		},
 	});
+	var ngheSiTacPham = new Swiper(".tab-nghe-si-tac-pham", {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		speed: 900,
+
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
+			1280: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		},
+	});
+	var ngheSiTacPham2 = new Swiper(".content-nghe-si-tac-pham", {
+		slidesPerView: 1,
+		speed: 900,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".box-detail-tac-pham .button-next",
+			prevEl: ".box-detail-tac-pham .button-prev",
+		},
+	});
 	var BannerHome2 = new Swiper(".box-detail-tac-pham .swiper-container", {
 		slidesPerView: 1,
 		speed: 900,
 		navigation: {
-			nextEl: ".box-detail-tac-pham .button-next",
-			prevEl: ".box-detail-tac-pham .button-prev",
+			nextEl: ".content-nghe-si-tac-pham .button-next",
+			prevEl: ".content-nghe-si-tac-pham .button-prev",
 		},
 	});
 	var trungBay = new Swiper(".home-3 .swiper-container", {

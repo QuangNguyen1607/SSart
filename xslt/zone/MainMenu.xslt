@@ -47,7 +47,7 @@
 		<li>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
-					<xsl:text></xsl:text>
+					<xsl:text>active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
 			<a>

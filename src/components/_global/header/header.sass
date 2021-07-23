@@ -67,6 +67,8 @@ header
 			height: 100%
 			position: relative
 			z-index: 999
+			[class*='Module']
+				height: 100%
 			a
 				width: 100%
 				display: block
@@ -136,6 +138,7 @@ header
 							font-size: 1rem
 							text-transform: uppercase
 							letter-spacing: 0.8px
+							font-weight: 500
 							padding-bottom: 5px
 							text-decoration: none
 							+hover-underline-poa(116%,50%,$text,1px)
@@ -193,6 +196,15 @@ header
 			display: flex
 			flex-direction: column
 			align-items: center
+			.dropdown
+				.list-dropdown
+					display: none
+					+type-none
+					margin-top: 15px
+					li
+						margin-top: 5px
+						a
+							font-size: r(18px)
 			&.active
 				opacity: 1
 				visibility: visible
@@ -214,7 +226,7 @@ header
 						animation-fill-mode: both
 						animation-name: opacityMenu
 						&.active
-							a
+							> a
 								&::before
 									width: 100%
 									transition-delay: 1s
@@ -230,6 +242,7 @@ header
 							animation-delay: .8s
 						&:nth-child(6)
 							animation-delay: .9s
+
 			.wrap-social
 				display: flex
 				align-items: center
