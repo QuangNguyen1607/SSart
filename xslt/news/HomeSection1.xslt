@@ -17,28 +17,24 @@
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
 				</img>
-			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="content-text">
-				<div class="title-text">
-					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-				</div>
-				<div class="desc-main">
-					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-				</div>
-				<div class="btn-left">
-					<a class="btn btn-view-more">
+				<div class="text">
+					<h2>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					</h2>
+					<div class="desc">
+						<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
+					</div>
+					<a class="btn btn-view-more white">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-					Xem thêm
+						Xem thêm
 					</a>
 				</div>
 			</div>
 		</div>
-</xsl:template>
+	</xsl:template>
 </xsl:stylesheet>

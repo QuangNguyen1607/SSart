@@ -1,7 +1,9 @@
 .home-1
 	@media (min-width: 1200px)
 		padding-top: 80px
-		padding-bottom: 140px
+		padding-bottom: 0px
+	@media (max-width: 575.98px)
+		padding-bottom: 0px
 	.content-text
 		height: 100%
 		display: flex
@@ -20,8 +22,55 @@
 			max-width: 600px
 	.img
 		overflow: hidden
+		position: relative
+		margin-bottom: 30px
+		display: block
+		+img-ratio(689/689)
 		img
 			transition: transform .6s cubic-bezier(.215,.61,.355,1)
 		&:hover
 			img
 				transform: scale(1.05)
+			.text
+				opacity: 1
+				visibility: visible
+		.text
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			padding: 0 r(35px)
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: rgba(0, 0, 0, 0.5)
+			opacity: 0
+			visibility: hidden
+			transition: .3s all ease-in-out
+			flex-direction: column
+			@media (max-width: 575.98px)
+				opacity: 1
+				visibility: visible
+			h2
+				font-size: r(24px)
+				font-weight: 700
+				text-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
+				color: white
+			.desc
+				margin-top: 15px
+				margin-bottom: 30px
+				font-size: 1rem
+				color: white
+				letter-spacing: 0.8px
+				text-align: center
+			.btn
+				border: 1px solid white
+				padding: 8px 20px
+				transition: .3s all ease-in-out
+				&:hover
+					background-color: #fff
+					color: black !important
+				&::after
+					display: none
+

@@ -167,21 +167,6 @@
                         <asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
                     </asp:Panel>
                 </main>
-                <div class="form-pinned-sub">
-                    <div class="wrap-title-close">
-                        <div class="title">ĐĂNG KÝ EMAIL ĐỂ CẬP NHẬT NHỮNG THÔNG TIN MỚI NHẤT TỪ S&S ART
-                        </div>
-                        <div class="close">
-                            <em class="material-icons close-ico">
-                                close
-                            </em>
-                            <em class="material-icons arrow-ico">
-                                arrow_upward
-                            </em>
-                        </div>
-                    </div>
-                    <portal:modulewrapper id="mdl216" runat="server" ConfigureModuleId="216" />
-                </div>
                 <!-- ////////////// End Main ////////////// -->
                 <!-- ////////////// Footer ////////////// -->
                 <footer>

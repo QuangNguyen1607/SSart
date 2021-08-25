@@ -73,9 +73,9 @@
 					<p class="display-small">
 						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 					</p>
-					<div class="display-price">Giá từ:
+					<!-- <div class="display-price">Giá từ:
 						<xsl:value-of disable-output-escaping="yes" select="OldPrice"></xsl:value-of>
-					- <xsl:value-of disable-output-escaping="yes" select="Price"></xsl:value-of> đ</div>
+					- <xsl:value-of disable-output-escaping="yes" select="Price"></xsl:value-of> đ</div> -->
 				</div>
 			</div>
 		</div>

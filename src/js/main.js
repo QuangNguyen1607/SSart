@@ -17,7 +17,15 @@ $(document).ready(function () {
 	AppendTitle();
 	clickAjaxMenu();
 	MainMenuMobile();
+	CheckClickSub();
 });
+/*==================== Check click popup ====================*/
+function CheckClickSub() {
+	$(".form-pinned-sub .close").click(function () {
+		$(this).toggleClass("active");
+		$(this).closest(".form-pinned-sub").toggleClass("active");
+	});
+}
 /*==================== MainMenuMobile ====================*/
 function MainMenuMobile() {
 	$("header .dropdown a").click(function (e) {
@@ -323,31 +331,7 @@ function swiperInit() {
 			prevEl: ".content-nghe-si-tac-pham .button-prev",
 		},
 	});
-	var trungBay = new Swiper(".home-3 .swiper-container", {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		observer: true,
-		observeParents: true,
-		speed: 900,
-		navigation: {
-			nextEl: ".home-3 .button-next",
-			prevEl: ".home-3 .button-prev",
-		},
-		breakpoints: {
-			500: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 30,
-			},
-			1280: {
-				slidesPerView: 4,
-				spaceBetween: 30,
-			},
-		},
-	});
+
 	var tinTucOther = new Swiper(".tin-tuc-other .swiper-container", {
 		slidesPerView: 1,
 		spaceBetween: 30,
@@ -366,6 +350,34 @@ function swiperInit() {
 				spaceBetween: 30,
 			},
 		},
+	});
+	$(".home-3 .wrap-slide-tab").each(function (index) {
+		$(this).addClass("slide-product-" + index);
+		new Swiper(".slide-product-" + index + " .swiper-container", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			observer: true,
+			observeParents: true,
+			speed: 900,
+			navigation: {
+				nextEl: ".slide-product-" + index + " .button-next",
+				prevEl: ".slide-product-" + index + " .button-prev",
+			},
+			breakpoints: {
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				1280: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+		});
 	});
 	$(".wrap-slide-section").each(function (index) {
 		$(this).addClass("slide-gallery-" + index);

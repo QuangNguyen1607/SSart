@@ -1,14 +1,19 @@
 section.home-1.main-section
 	.container
 		.row
-			.col-lg-6(data-scroll data-scroll-delay="0.06" data-scroll-speed="6")
-				.img
-					img(src="./img/home/1.png", alt="")
-			.col-lg-6
-				.content-text(data-scroll="" data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05")
-					.title-text L’Atelier by Cyril Kongo -
-						br
-						| cầu nối giữa các vũ trụ văn hoá khác nhau
-					.desc-main Vừa qua, nghệ sĩ graffiti người Pháp gốc Việt, Cyril Kongo, đã bật mí một dự án hợp tác đặc biệt mà ông sẽ chính thức ra mắt vào tháng 6 tới đây. Đó chính là xưởng vẽ mang tên L’Atelier by Cyril Kongo tại khu nghỉ dưỡng The Apurva Kempinski Bali, trên hòn đảo Bali giữa thiên nhiên trù phú.
-					.btn-left
-						a(href="").btn.btn-view-more Xem thêm
+			-for(i=0;i<2;i++)
+				.col-lg-6(data-scroll data-scroll-delay="0.06" data-scroll-speed="6")
+					.img
+						img(src="./img/home/1.png", alt="")
+						.text
+							h2 HOM NGUYEN
+							.desc Vừa qua, nghệ sĩ graffiti người Pháp gốc Việt, Cyril Kongo, đã bật mí một dự án hợp tác đặc biệt mà ông sẽ chính thức ra mắt vào tháng 6 tới đây. Đó chính là xưởng vẽ mang tên L’Atelier by Cyril Kongo tại khu nghỉ dưỡng The Apurva Kempinski Bali, trên hòn đảo Bali giữa thiên nhiên trù phú.
+							a(href="").btn.btn-view-more.white Xem thêm
+			//- .col-lg-6
+			//- 	.content-text(data-scroll="" data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05")
+			//- 		.title-text L’Atelier by Cyril Kongo -
+			//- 			br
+			//- 			| cầu nối giữa các vũ trụ văn hoá khác nhau
+			//- 		.desc-main Vừa qua, nghệ sĩ graffiti người Pháp gốc Việt, Cyril Kongo, đã bật mí một dự án hợp tác đặc biệt mà ông sẽ chính thức ra mắt vào tháng 6 tới đây. Đó chính là xưởng vẽ mang tên L’Atelier by Cyril Kongo tại khu nghỉ dưỡng The Apurva Kempinski Bali, trên hòn đảo Bali giữa thiên nhiên trù phú.
+			//- 		.btn-left
+			//- 			a(href="").btn.btn-view-more Xem thêm
