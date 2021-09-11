@@ -38,11 +38,11 @@
 							<div class="title-sub">
 								<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 							</div>
-							<div class="price">Giá từ:
+							<!-- <div class="price">Giá từ:
 								<xsl:value-of disable-output-escaping="yes" select="OldPrice"></xsl:value-of>
 								<xsl:text disable-output-escaping="yes"> - </xsl:text>
 								<xsl:value-of disable-output-escaping="yes" select="Price"></xsl:value-of> đ
-							</div>
+							</div> -->
 							<div class="content">
 								<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 							</div>
@@ -134,11 +134,11 @@
 					<p class="display-small">
 						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 					</p>
-					<div class="display-price">Giá từ:
+					<!-- <div class="display-price">Giá từ:
 						<xsl:value-of disable-output-escaping="yes" select="OldPrice"></xsl:value-of>
 						<xsl:text disable-output-escaping="yes"> - </xsl:text>
 						<xsl:value-of disable-output-escaping="yes" select="Price"></xsl:value-of> đ
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
