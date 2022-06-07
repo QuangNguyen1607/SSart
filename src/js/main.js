@@ -239,7 +239,7 @@ function mappingMenu() {
 		mobileMethod: "appendTo",
 		desktopWrapper: "header nav .wrap-menu-right .bottom-menu",
 		desktopMethod: "prependTo",
-		breakpoint: 1024,
+		breakpoint: 1280,
 	});
 	let searchBox = $(
 		"header nav .wrap-menu-right .top-menubar .search"
@@ -248,7 +248,7 @@ function mappingMenu() {
 		mobileMethod: "insertBefore",
 		desktopWrapper: "header nav .wrap-menu-right .top-menubar",
 		desktopMethod: "prependTo",
-		breakpoint: 1024,
+		breakpoint: 1280,
 	});
 	let Social = $(
 		"header nav .wrap-menu-right .top-menubar .wrap-social"
@@ -257,7 +257,7 @@ function mappingMenu() {
 		mobileMethod: "appendTo",
 		desktopWrapper: "header nav .wrap-menu-right .top-menubar ",
 		desktopMethod: "appendTo",
-		breakpoint: 1024,
+		breakpoint: 1280,
 	});
 }
 function swiperInit() {

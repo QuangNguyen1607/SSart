@@ -31,7 +31,7 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						Xem thêm
+						<xsl:value-of disable-output-escaping="yes" select="/NewsList/TextView"></xsl:value-of>
 					</a>
 				</div>
 			</div>

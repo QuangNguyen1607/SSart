@@ -8,7 +8,9 @@
 		<div class="ajaxSelect">
 			<div class="wrap-select-post">
 				<div class="post-select">
-					<p>Đề mục</p>
+					<p>
+						<xsl:value-of disable-output-escaping="yes" select="/ZoneList/TitleText"></xsl:value-of>
+					</p>
 					<div class="select-option">
 						<span>
 							<xsl:choose>
@@ -16,7 +18,7 @@
 									<xsl:value-of disable-output-escaping="yes" select="Zone[IsActive='true']/Zone[IsActive='true']/Title"></xsl:value-of>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:text disable-output-escaping="yes">Tất cả</xsl:text>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/NewsListAllFilter"></xsl:value-of>
 								</xsl:otherwise>
 							</xsl:choose>
 						</span>
@@ -27,7 +29,9 @@
 					</div>
 				</div>
 				<div class="post-select">
-					<p>Nghệ sĩ</p>
+					<p>
+						<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ArtistText"></xsl:value-of>
+					</p>
 					<div class="select-option">
 						<span>
 							<xsl:choose>
@@ -35,7 +39,7 @@
 									<xsl:value-of disable-output-escaping="yes" select="Zone[IsActive='true']/Zone[IsActive='true']/Zone[IsActive='true']/Title"></xsl:value-of>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:text disable-output-escaping="yes">Tất cả</xsl:text>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/NewsListAllFilter"></xsl:value-of>
 								</xsl:otherwise>
 							</xsl:choose>
 						</span>

@@ -169,7 +169,8 @@
                 </main>
                 <div class="form-pinned-sub">
                     <div class="wrap-title-close">
-                        <div class="title">ĐĂNG KÝ EMAIL ĐỂ CẬP NHẬT NHỮNG THÔNG TIN MỚI NHẤT TỪ S&S ART
+                        <div class="title">
+                            <portal:modulewrapper id="mdl218" runat="server" ConfigureModuleId="218" />
                         </div>
                         <div class="close">
                             <em class="material-icons close-ico">
@@ -252,7 +253,7 @@
         <script>
             LazyLoad.css([
                 '/Data/Sites/1/skins/default/css/plugins.min.css',
-                'https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700;900&display=swap',
+                'https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap',
                 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css',
                 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
                 'https://fonts.googleapis.com/icon?family=Material+Icons',

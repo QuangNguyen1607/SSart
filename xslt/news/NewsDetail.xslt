@@ -55,7 +55,9 @@
 		</section>
 		<section class="tin-tuc-other">
 			<div class="container">
-				<div class="title-page-big mb">Tin tức - Sự kiện khác</div>
+				<div class="title-page-big mb">
+					<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/OtherNewsText"></xsl:value-of>
+				</div>
 				<div class="wrap-slide-main">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
@@ -97,7 +99,7 @@
 				</div>
 				<div class="post-content">
 					<a class="post-category" href="javascript:;">
-						<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
+						<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 					</a>
 					<a class="post-title" href="">
 						<xsl:attribute name="href">

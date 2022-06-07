@@ -15,7 +15,7 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Zone/Title"></xsl:value-of>
 						</xsl:attribute>
-					XEM TẤT CẢ
+						<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ViewAllText"></xsl:value-of>
 					</a>
 				</div>
 				<div class="wrap-post">
@@ -59,7 +59,7 @@
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</a>
 					<div class="post-author">
-						<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
+						<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 					</div>
 					<div class="post-date">
 						<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>

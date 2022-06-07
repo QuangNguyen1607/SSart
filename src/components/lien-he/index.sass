@@ -18,6 +18,25 @@
 			font-size: 1rem
 			letter-spacing: 0.8px
 			margin-bottom: 14px
+		.form-desc-bottom
+			padding-top: 10px
+			.btn-popup-form
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				padding: 8px 30px
+				text-transform: uppercase
+				text-align: center
+				color: white
+				font-size: 1rem
+				font-weight: 600
+				background-color: #000000
+				transition: .3s all ease-in-out
+				border: 1px solid transparent
+				&:hover
+					background-color: transparent
+					border: 1px solid #000
+					color: black
 		.wrap-form
 			margin-top: 20px
 			.form-group
@@ -109,3 +128,49 @@
 	.iframe-map
 		margin-top: 60px
 		height: 450px
+#salesforce-form
+	@media (max-width: 575.98px)
+		padding: 30px
+	br
+		display: none
+	.wrap-form
+		@media (min-width: 768px)
+			display: grid
+			grid-template-columns: 1fr 1fr
+			column-gap: 30px
+			row-gap: 5px
+	label
+		display: block
+		font-size: r(14px)
+		margin-bottom: 15px
+		font-weight: 600
+	input[type='text'],select
+		display: block
+		padding: 8px 15px
+		border: 1px solid #f1f1f1
+		color: black
+		transition: .3s all ease-in-out
+		width: 100%
+		margin-bottom: 10px
+		font-size: 14px
+		&:hover,&:focus
+			border: 1px solid black
+	.frm-btnwrap
+		grid-column: span 2
+	input[type='submit']
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		padding: 10px 30px
+		text-transform: uppercase
+		text-align: center
+		color: white
+		font-size: 1rem
+		font-weight: 600
+		margin-top: 15px
+		text-transform: uppercase
+		background-color: #000000
+		transition: .3s all ease-in-out
+		border: 1px solid transparent
+		width: 100%
+

@@ -85,7 +85,9 @@
 		<xsl:if test="count(ProductOther) &gt; 0">
 			<section class="trung-bay-khac">
 				<div class="container">
-					<h3 class="title-page-big text-center mb">Tác phẩm trưng bày khác</h3>
+					<h3 class="title-page-big text-center mb">
+						<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherArtWorks"></xsl:value-of>
+					</h3>
 					<div class="wrap-slide-section">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">

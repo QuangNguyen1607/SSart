@@ -33,7 +33,7 @@
 					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-				XEM THÊM
+				<xsl:value-of disable-output-escaping="yes" select="/ZoneList/TextView"></xsl:value-of>
 				</a>
 			</div>
 		</div>

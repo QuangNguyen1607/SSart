@@ -15,9 +15,11 @@ header
 		padding: 10px 0px
 		display: flex
 		justify-content: space-between
-		@media (max-width: 1023.98px)
+		@media (max-width: 1280px)
 			padding: 7px 0
 			height: 90px
+		@media (max-width: 1023.98px)
+			height: 65px
 		.change-lang
 			display: flex
 			align-items: center
@@ -78,11 +80,11 @@ header
 					height: 100%
 					object-fit: contain
 		.search
-			@media (max-width: 1023.98px)
+			@media (max-width: 1280px)
 				margin-right: 15px
 				padding-top: 3px
 		.wrap-menu-right
-			@media (max-width: 1023.98px)
+			@media (max-width: 1280px)
 				display: flex
 				align-items: center
 			.top-menubar
@@ -93,7 +95,7 @@ header
 				align-items: center
 				padding-right: 4px
 				padding-bottom: 13px
-				@media (max-width: 1023.98px)
+				@media (max-width: 1280px)
 					display: none
 				.search
 					margin-right: 26px
@@ -118,8 +120,11 @@ header
 				width: 100%
 				height: calc( 100% - 48px )
 				padding-bottom: 30px
-				@media (max-width: 1023.98px)
-					display: none
+				@media (max-width: 1280px)
+					padding-bottom: 0
+				@media (max-width: 1280px)
+					.main-menu
+						display: none !important
 				.main-menu
 					display: flex
 					height: 100%
@@ -242,6 +247,10 @@ header
 							animation-delay: .8s
 						&:nth-child(6)
 							animation-delay: .9s
+						&:nth-child(7)
+							animation-delay: 1s
+						&:nth-child(8)
+							animation-delay: 1.1s
 
 			.wrap-social
 				display: flex

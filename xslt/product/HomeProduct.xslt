@@ -5,7 +5,9 @@
 		<section class="home-3 main-section">
 			<div class="container">
 				<div class="wrap-title-select">
-					<h2 class="title-text pl">Trưng bày</h2>
+					<h2 class="title-text pl">
+						<xsl:value-of disable-output-escaping="yes" select="ModuleTitle"></xsl:value-of>
+					</h2>
 					<!-- <div class="wrap-select-1">
 						<ul>
 							<xsl:apply-templates select="Zone" mode="select"></xsl:apply-templates>
